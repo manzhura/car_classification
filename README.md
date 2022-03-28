@@ -7,3 +7,5 @@
 1. Часть посвещена предподготовке данных, настройке, обучению и анализу модели (описать выбранную модель и применение Imagedatagenerator) ipynd.
 2.  Развертывание модели на Docker и тестирование на запущенной модели heroku.
 
+#  Развертывание модели с помощью tensorflow server
+Подробный порядок развертывания модели описан в https://www.tensorflow.org/tfx/tutorials/serving/rest_simple, а описание краткое взять от седа -https://neptune.ai/blog/how-to-serve-machine-learning-models-with-tensorflow-serving-and-docker

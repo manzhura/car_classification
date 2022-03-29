@@ -27,6 +27,7 @@ This message shows that your installation appears to be working correctly.
 Теперь, когда у вас правильно установлен Docker, вы собираетесь использовать его для загрузки TF Serving. 
 В терминале выполните следующую команду:
 
+
  ~$  docker pull tensorflow/serving:latest-gpu 
  
  а если вы хотите использовать CPU то: 
@@ -39,7 +40,7 @@ Status: Image is up to date for tensorflow/serving:latest-gpu
 docker.io/tensorflow/serving:latest-gpu
 
 # 2.3 Обслуживание сохраненной модели с помощью Tensorflow Serving
-
+Подробный порядок развертывания модели описан в [руководстве](https://www.tensorflow.org/tfx/tutorials/serving/rest_simple)
 Папка с сохраненной моделью должна быть представлена в следющем виде:
 ├── img_classifier 
 │ ├── 1600788643 
@@ -81,7 +82,8 @@ docker run -p 8501:8501 --name tf_car_classifier \
 
 https://doc.cuba-platform.com/manual-latest-ru/heroku_container.html
 
-Подробный порядок развертывания модели описан в [руководстве](https://www.tensorflow.org/tfx/tutorials/serving/rest_simple).
+
+Подробный порядок развертывания модели описан в [руководстве](https://www.tensorflow.org/tfx/tutorials/serving/rest_simple)
 
 
 

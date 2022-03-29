@@ -25,7 +25,6 @@ This message shows that your installation appears to be working correctly.
 
 # 2.2 Установка обслуживания Tensorflow
 Теперь, когда у вас правильно установлен Docker, вы собираетесь использовать его для загрузки TF Serving. 
-(все операции выполняются в окне терминала, открытого в главном разделе проекта)
 В терминале выполните следующую команду:
 
  ~$  docker pull tensorflow/serving:latest-gpu 
@@ -40,14 +39,34 @@ Status: Image is up to date for tensorflow/serving:latest-gpu
 docker.io/tensorflow/serving:latest-gpu
 
 # 2.3 Обслуживание сохраненной модели с помощью Tensorflow Serving
+
 Папка с сохраненной моделью должна быть представлена в следющем виде:
 ├── img_classifier 
 │ ├── 1600788643 
 │ │ ├── assets 
 │ │ ├── save_model.pb 
 │ │ └── переменные
- 
+После сохранения модели и правильной установки Tensorflow Serving с Docker, вы будете использовать ее в качестве конечной точки API.
+Tensorflow Serving допускает два типа конечных точек API — REST и gRPC:
+
+REST — это коммуникационный «протокол», используемый веб-приложениями. Он определяет стиль общения клиентов с веб-сервисами. Клиенты REST взаимодействуют с сервером, используя стандартные методы HTTP, такие как GET, POST, DELETE и т. д. Полезная нагрузка запросов в основном кодируется в формате JSON.
+С другой стороны, gRPC — это протокол связи, изначально разработанный в Google. Стандартный формат данных, используемый с gRPC, называется буфером протокола . gRPC обеспечивает связь с малой задержкой и меньшую полезную нагрузку, чем REST, и предпочтительнее при работе с очень большими файлами во время логического вывода. 
+
+В папке проекта откройте терминал и добавьте команду Docker ниже:
+
+docker run -p 8501:8501 --name tf_car_classifier \
+                        --mount type=bind,source=/home/cooper/my_projects/my-car-classification/img_classifier,\
+                        target=/models/img_classifier \
+                        -e MODEL_NAME=img_classifier -t tensorflow/serving
+ где                      
+ -p 8501:8501: это порт конечной точки REST. Каждый запрос прогнозирования будет направляться на этот порт. Например, вы можете сделать запрос прогноза на http://localhost:8501 .
+— name tf_car_classifier: это имя, данное контейнеру Docker, на котором работает TF Serving. Его можно использовать для запуска и остановки экземпляра контейнера позже. 
+— mount type=bind,source=/Users/tf-server/img_classifier/,target=/models/img_classifier: Команда mount просто копирует модель по указанному абсолютному пути ( /home/cooper/my_projects/my-car-classification/img_classifier ) в Docker контейнер ( /models/img_classifier ), чтобы у TF Serving был к нему доступ. 
+-e MODEL_NAME=img_classifier: имя модели  для запуска. Это имя, которое вы использовали для сохранения вашей моделипри внутри контейнера.
+-t tensorflow/serving: Контейнер TF Serving Docker для запуска.
+
 Подробный порядок развертывания модели описан в [руководстве](https://www.tensorflow.org/tfx/tutorials/serving/rest_simple).
+
 
 
 

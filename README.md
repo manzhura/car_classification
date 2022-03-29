@@ -25,7 +25,8 @@ This message shows that your installation appears to be working correctly.
 
 # 2.2 Установка обслуживания Tensorflow
 Теперь, когда у вас правильно установлен Docker, вы собираетесь использовать его для загрузки TF Serving. 
-В вашем терминале выполните следующую команду ниже:
+(все операции выполняются в окне терминала, открытого в главном разделе проекта)
+В терминале выполните следующую команду:
 
  ~$  docker pull tensorflow/serving:latest-gpu 
  
@@ -38,6 +39,13 @@ This message shows that your installation appears to be working correctly.
 Status: Image is up to date for tensorflow/serving:latest-gpu
 docker.io/tensorflow/serving:latest-gpu
 
+# 2.3 Обслуживание сохраненной модели с помощью Tensorflow Serving
+Папка с сохраненной моделью должна быть представлена в следющем виде:
+├── img_classifier 
+│ ├── 1600788643 
+│ │ ├── assets 
+│ │ ├── save_model.pb 
+│ │ └── переменные
  
 Подробный порядок развертывания модели описан в [руководстве](https://www.tensorflow.org/tfx/tutorials/serving/rest_simple).
 

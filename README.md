@@ -11,4 +11,4 @@
 Подробный порядок развертывания модели описан в https://www.tensorflow.org/tfx/tutorials/serving/rest_simple, а описание краткое взять от седа -https://neptune.ai/blog/how-to-serve-machine-learning-models-with-tensorflow-serving-and-docker
 
 
-[TensorFlow Serving](https://www.tensorflow.org/tfx/guide/serving) — это гибкая высокопроизводительная система обслуживания моделей машинного обучения, разработанная для производственных сред. TensorFlow Serving упрощает развертывание новых алгоритмов и экспериментов, сохраняя при этом ту же архитектуру сервера и API. TensorFlow Serving обеспечивает готовую интеграцию с моделями TensorFlow, но может быть легко расширен для обслуживания других типов моделей. 
+[TensorFlow Serving] (https://www.tensorflow.org/tfx/guide/serving) — это гибкая высокопроизводительная система обслуживания моделей машинного обучения, разработанная для производственных сред. TensorFlow Serving упрощает развертывание новых алгоритмов и экспериментов, сохраняя при этом ту же архитектуру сервера и API. TensorFlow Serving обеспечивает готовую интеграцию с моделями TensorFlow, но может быть легко расширен для обслуживания других типов моделей. 

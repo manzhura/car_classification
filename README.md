@@ -58,11 +58,16 @@ docker run -p 8501:8501 --name tf_car_classifier \
                         --mount type=bind,source=/home/cooper/my_projects/my-car-classification/img_classifier,\
                         target=/models/img_classifier \
                         -e MODEL_NAME=img_classifier -t tensorflow/serving
- где                      
+ где 
+ 
  -p 8501:8501: это порт конечной точки REST. Каждый запрос прогнозирования будет направляться на этот порт. Например, вы можете сделать запрос прогноза на http://localhost:8501 .
+ 
 — name tf_car_classifier: это имя, данное контейнеру Docker, на котором работает TF Serving. Его можно использовать для запуска и остановки экземпляра контейнера позже. 
+
 — mount type=bind,source=/Users/tf-server/img_classifier/,target=/models/img_classifier: Команда mount просто копирует модель по указанному абсолютному пути ( /home/cooper/my_projects/my-car-classification/img_classifier ) в Docker контейнер ( /models/img_classifier ), чтобы у TF Serving был к нему доступ. 
+
 -e MODEL_NAME=img_classifier: имя модели  для запуска. Это имя, которое вы использовали для сохранения вашей моделипри внутри контейнера.
+
 -t tensorflow/serving: Контейнер TF Serving Docker для запуска.
 
 Подробный порядок развертывания модели описан в [руководстве](https://www.tensorflow.org/tfx/tutorials/serving/rest_simple).

@@ -10,7 +10,7 @@
 #  Развертывание модели с помощью TensorFlow Serving
 [TensorFlow Serving](https://www.tensorflow.org/tfx/guide/serving) — это гибкая высокопроизводительная система обслуживания моделей машинного обучения, разработанная для производственных сред. TensorFlow Serving упрощает развертывание новых алгоритмов и экспериментов, сохраняя при этом ту же архитектуру сервера и API. TensorFlow Serving обеспечивает готовую интеграцию с моделями TensorFlow, но может быть легко расширен для обслуживания других типов моделей. 
 
-Подробный порядок развертывания модели описан в [руководстве](https://www.tensorflow.org/tfx/tutorials/serving/rest_simple)
+Подробный порядок развертывания модели описан в [руководстве](https://www.tensorflow.org/tfx/tutorials/serving/rest_simple).
 
 
 

@@ -33,7 +33,7 @@
  
  а если вы хотите использовать CPU то: 
  
-    ~$ docker pull tensorflow/serving:latest-gpu
+    ~$ docker pull tensorflow/serving:latest
  
  и в случае правильной установки вы получите сообщение:
 

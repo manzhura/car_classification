@@ -42,11 +42,13 @@ docker.io/tensorflow/serving:latest-gpu
 # 2.3 Обслуживание сохраненной модели с помощью Tensorflow Serving
 Подробный порядок развертывания модели описан в [руководстве](https://www.tensorflow.org/tfx/tutorials/serving/rest_simple)
 Папка с сохраненной моделью должна быть представлена в следющем виде:
+
 ├── img_classifier 
 │ ├── 1600788643 
 │ │ ├── assets 
 │ │ ├── save_model.pb 
 │ │ └── переменные
+
 После сохранения модели и правильной установки Tensorflow Serving с Docker, вы будете использовать ее в качестве конечной точки API.
 Tensorflow Serving допускает два типа конечных точек API — REST и gRPC:
 

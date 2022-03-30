@@ -38,7 +38,7 @@
  и в случае правильной установки вы получите сообщение:
 
     Status: Image is up to date for tensorflow/serving:latest-gpu
-docker.io/tensorflow/serving:latest-gpu
+    docker.io/tensorflow/serving:latest-gpu
 
 ### 2.3. Обслуживание сохраненной модели с помощью Tensorflow Serving
 Подробный порядок развертывания модели описан в [руководстве](https://www.tensorflow.org/tfx/tutorials/serving/rest_simple).

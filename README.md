@@ -21,8 +21,8 @@
 
 и в случае правильной установки вы получите сообщение:
 
-Hello from Docker!
-This message shows that your installation appears to be working correctly.
+    Hello from Docker!
+    This message shows that your installation appears to be working correctly.
 
 ### 2.2. Установка обслуживания Tensorflow
 Теперь, когда у вас правильно установлен Docker, вы собираетесь использовать его для загрузки TF Serving. 
